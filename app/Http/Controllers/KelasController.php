@@ -13,7 +13,7 @@ class KelasController extends Controller
      */
     public function index()
     {
-         $kelas= Kelas::with('Peserta')->get();
+         $kelas= Kelas::all();
          return $kelas;
     }
 
