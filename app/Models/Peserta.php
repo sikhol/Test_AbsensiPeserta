@@ -9,10 +9,10 @@ class Peserta extends Model
   protected $table = 'peserta';
   protected $primaryKey = 'id_peserta';
   public $incrementing = true;
-  protected $fillable = ['nama','kelas','alamat'];
+  protected $fillable = ['nama','kelas','telpon'];
 
   public function Kelas()
   {
-      return $this->hasMany('App\Models\Kelas','id_kelas');
+      return $this->belongsToMany('App\Models\Kelas','peserta_kelas','id_peserta','id_kelas');
   }
 }

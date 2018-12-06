@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 Route::group(['middleware'=> ['api']], function(){
     Route::resource('peserta', 'PesertaController');
     Route::resource('kelas', 'KelasController');
+    Route::resource('relasi', 'RelasiController');
 
 });
 

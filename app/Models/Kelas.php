@@ -11,8 +11,10 @@ class Kelas extends Model
   public $incrementing = true;
   protected $fillable = ['nama_kelas'];
 
+
   public function Peserta()
   {
-      return $this->belongsTo('App\Models\Peserta','id_peserta');
+      return $this->belongsToMany('App\Models\Peserta','peserta_kelas','id_kelas','id_peserta');
   }
+
 }

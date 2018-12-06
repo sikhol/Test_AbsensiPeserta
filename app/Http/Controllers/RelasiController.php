@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Peserta;
+use App\Models\Relasi;
 
-class PesertaController extends Controller
+class RelasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,7 @@ class PesertaController extends Controller
     public function index()
     {
 
-        $peserta= Peserta::with('Kelas')->get();
 
-        return $peserta;
     }
 
     /**
@@ -39,16 +37,16 @@ class PesertaController extends Controller
     public function store(Request $request)
     {
           $this->validate($request,[
-            'nama'=>'required',
-            
-            'telpon'=> 'required',
+            'id_kelas'=>'required',
+
+            'id_peserta'=> 'required',
           ]);
 
-          $peserta= Peserta::create($request->all());
+          $relasi= Relasi::create($request->all());
 
-          if ($peserta != FALSE) {
+          if ($relasi != FALSE) {
             return response()->json([
-              'data'=> $peserta,
+              'data'=> $relasi,
               'status'=> 'berhasil',
               'message'=> 'data berhasil ditambahkan',
             ],201);
@@ -69,13 +67,7 @@ class PesertaController extends Controller
      */
     public function show($id)
     {
-        $peserta= Peserta::with('Kelas')->find($id);
-
-        if(!$peserta)
-        return response()->json([
-          'error'=>'id tidak ditemukan'
-        ],404);
-        return $peserta;
+      
     }
 
     /**

@@ -13,7 +13,7 @@ class KelasController extends Controller
      */
     public function index()
     {
-         $kelas= Kelas::all();
+         $kelas= Kelas::with('Peserta')->get();
          return $kelas;
     }
 
@@ -64,7 +64,7 @@ class KelasController extends Controller
      */
     public function show($id)
     {
-      $kelas= Kelas::find($id);
+      $kelas= Kelas::with('Peserta')->find($id);
 
       if(!$kelas)
       return response()->json([
