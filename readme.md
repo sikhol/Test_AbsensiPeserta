@@ -27,6 +27,12 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 
 If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
 
+##Cara  Akses API
+
+1.  http://127.0.0.1:8000/api/kelas untuk  get, pos data kelas
+2.  http://127.0.0.1:8000/api/peserta untuk get, pos data peserta
+3.  http://127.0.0.1:8000/api/kelas/id untuk detail kelas (id sesuai db)
+4.  http://127.0.0.1:8000/api/peserta/id untuk detail peserta (id sesuai db)
 ## Laravel Sponsors
 
 We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
