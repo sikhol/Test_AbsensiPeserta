@@ -33,8 +33,9 @@ If you're not in the mood to read, [Laracasts](https://laracasts.com) contains o
 2.  http://127.0.0.1:8000/api/peserta untuk get, pos data peserta
 3.  http://127.0.0.1:8000/api/kelas/id untuk detail kelas (id sesuai db)
 4.  http://127.0.0.1:8000/api/peserta/id untuk detail peserta (id sesuai db)
+5.  http://127.0.0.1:8000/api/relasi untuk menambahkan data  peserta beserta kelasnya sekaligus
 
-5.  database  import saja
+NB : DB import saja
 ## Laravel Sponsors
 
 We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
